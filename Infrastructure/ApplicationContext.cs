@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities.Users;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure
 {
-    public class ApplicationContext: DbContext
+    public class ApplicationContext : DbContext
     {
-        //public ApplicationContext(DbContextOptions<ApplicationDbContext> options)
-        //               : base(options)
-        //{
-        //}
-        //#region Tables
-        //public virtual DbSet<Business> Businesses { get; set; }
-        //#endregion
+        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
+        {
+
+        }
+        public DbSet<User> Users { get; set; }
     }
 }
