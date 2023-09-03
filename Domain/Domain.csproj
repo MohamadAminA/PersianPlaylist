@@ -5,7 +5,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Repositories\AuthenticationRepo\**" />
+    <EmbeddedResource Remove="Repositories\AuthenticationRepo\**" />
+    <None Remove="Repositories\AuthenticationRepo\**" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Entities\Orders\" />
     <Folder Include="Entities\Playlists\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
   </ItemGroup>
 </Project>

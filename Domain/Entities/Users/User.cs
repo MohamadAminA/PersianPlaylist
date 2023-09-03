@@ -14,5 +14,6 @@ namespace Domain.Entities.Users
         public int VerificationCode { get; set; }
         public DateTime ExpireVerificationCode { get; set; }
         public DateTime RegisterDate { get; set; }
+        public DateTime LastEditDate { get; set; }
     }
 }
